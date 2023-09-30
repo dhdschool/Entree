@@ -12,14 +12,12 @@ import androidx.viewpager2.widget.ViewPager2
 
 
 class PageActivity: Fragment(){
-//    override fun onCreate(savedInstanceState: Bundle?){
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_page)
-//    }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
         inflater.inflate(R.layout.activity_scroller, container, false)
 
 }
+
+
 private const val NUM_PAGES = 3
 class ScreenSlidePagerActivity : FragmentActivity(){
     private lateinit var viewPager: ViewPager2
