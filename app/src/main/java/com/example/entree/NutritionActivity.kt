@@ -1,5 +1,6 @@
 package com.example.entree
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -42,5 +43,4 @@ class NutritionActivity : ComponentActivity() {
         // Note: they seem to really not want you to change xml text after runtime for some reason. Like, everything in strings.xml for example is permanent. Figure that out FIRST!
 
     }
-
 }
