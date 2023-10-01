@@ -20,17 +20,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <ImageView
+        android:id="@+id/buttonBackground"
+        android:layout_width="61dp"
+        android:layout_height="53dp"
+        android:src="@drawable/logox"
+        app:layout_constraintBottom_toBottomOf="@+id/matchReturn"
+        app:layout_constraintEnd_toEndOf="@+id/matchReturn" />
+
     <ImageButton
         android:id="@+id/matchReturn"
         android:layout_width="61dp"
         android:layout_height="53dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:alpha="0"
         app:layout_constraintEnd_toStartOf="@+id/matchPfp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/textView6"
-        android:background="@color/white"
         app:srcCompat="@drawable/logox" />
 
     <com.google.android.material.imageview.ShapeableImageView
