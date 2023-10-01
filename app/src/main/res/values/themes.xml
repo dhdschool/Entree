@@ -17,5 +17,26 @@
         <item name="cornerSizeBottomRight">60dp</item>
         <item name="cornerFamily">rounded</item>
     </style>
+    <style name="TitleView.Corner" parent="">
+        <item name="cornerSizeTopRight">50dp</item>
+        <item name="cornerSizeTopLeft">50dp</item>
+        <item name="cornerSizeBottomLeft">50dp</item>
+        <item name="cornerSizeBottomRight">50dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+    <style name="TextView.Corner" parent="">
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+    <style name="PfpView.Corner" parent="">
+        <item name="cornerSizeTopRight">28dp</item>
+        <item name="cornerSizeTopLeft">28dp</item>
+        <item name="cornerSizeBottomLeft">28dp</item>
+        <item name="cornerSizeBottomRight">28dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
 
 </resources>
