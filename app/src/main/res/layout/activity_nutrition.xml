@@ -52,7 +52,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:padding="8dp"
-        android:text="Daniel Donze"
+        android:text="@string/currentFood"
+
+
 
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,35 +81,417 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="4dp"
-            android:orientation="horizontal"
-            android:paddingLeft="5dp"
-            android:paddingRight="100dp">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/textPfp1"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginHorizontal="4dp"
-                android:layout_marginVertical="4dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/matchReturn"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/TextView.Corner"
-                app:srcCompat="@drawable/donze" />
-
-            <TextView
-                android:id="@+id/messageView1"
-                android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
                 android:layout_marginVertical="4dp"
-                android:background="#95FDAC33"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp"
-                android:text="Hello! I'm Daniel Donze" />
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <TextView
+                    android:id="@+id/messageView0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="Beginning of your coversation history"
+                    android:textColor="#F8777777"
+                    android:textcolor="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="My nutrition facts:" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp7"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp8"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp9"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp10"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp11"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/textPfp12"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchReturn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/TextView.Corner"
+                    app:srcCompat="@drawable/donze" />
+
+                <TextView
+                    android:id="@+id/messageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="#95FDAC33"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@string/foodFactMessage" />
+            </LinearLayout>
         </LinearLayout>
+
+
+
     </ScrollView>
 
 

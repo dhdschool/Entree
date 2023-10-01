@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment
+import org.json.JSONObject
+import java.io.File
 
 class MainActivity : ComponentActivity(){
 
@@ -21,9 +24,10 @@ class MainActivity : ComponentActivity(){
                 val i = Intent(this, PageActivity::class.java)
                 startActivity(i)
             }
-
-
-
+        }
+    fun jsonDataSort(){
+        val jsonFile = File("food.json")
+        val foodObject = JSONObject(jsonFile.readText())
     }
 
 }
