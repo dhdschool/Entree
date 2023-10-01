@@ -13,6 +13,15 @@ import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 
+
+//class currentScreen{
+//    public val jsonSelection =
+//    constructor(){
+//        this.
+//    }
+//}
+
+
 class ScreenSlidePageFragment(activityPageId : Int) : Fragment(){
     public final val activityPageId : Int = activityPageId
     override fun onCreateView(inflater: LayoutInflater,
