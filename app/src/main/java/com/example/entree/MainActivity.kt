@@ -1,6 +1,7 @@
 package com.example.entree
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -18,7 +19,10 @@ class MainActivity : ComponentActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        var prefs = getSharedPreferences(
+            "com.example.app", MODE_PRIVATE
+        )
+        prefs.edit().clear().commit();
         findViewById<Button>(R.id.beginButton)
             .setOnClickListener {
                 val i = Intent(this, PageActivity::class.java)

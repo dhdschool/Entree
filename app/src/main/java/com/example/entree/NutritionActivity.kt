@@ -36,7 +36,7 @@ class NutritionActivity : ComponentActivity() {
         val temp = json.getJSONObject(currentFood)
         System.out.println(temp)
         if(temp != null){
-            currentFood = currentFood % json.length()
+            if(currentFood >= 40) currentFood=0
             val d = temp.getString("name").filter{!it.isWhitespace()}
             val imageId = getResources().getIdentifier(d, "drawable", this.getPackageName())
         initDms(temp, imageId)}}
