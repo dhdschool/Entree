@@ -6,12 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import org.json.JSONArray
 //import kotlinx.serialization.*
 //import kotlinx.serialization.json.Json
 //import kotlinx.serialization.json.JsonObject
@@ -76,13 +79,7 @@ class PageActivity : FragmentActivity() {
 //        }
     }
 
-    fun getCurrentItem() : Int{
-        return this.viewPager.getCurrentItem()
-    }
 
-    fun setCurrentItem(intSet: Int){
-        this.viewPager.setCurrentItem(intSet)
-    }
 
 
     private inner class ScreenSlidePagerAdapter(fa: PageActivity) : FragmentStateAdapter(fa) {
@@ -99,6 +96,8 @@ class PageActivity : FragmentActivity() {
 
             return currentView
         }
+
+
     }
 
 
