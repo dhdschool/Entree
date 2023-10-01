@@ -6,12 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
 
@@ -48,7 +51,18 @@ class PageActivity : FragmentActivity() {
         viewPager.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 if(position==2){
+
+                    var prefs = getSharedPreferences(
+                        "com.example.app", MODE_PRIVATE
+                    )
+                    val setter = prefs.getInt("com.example.app.currentFood", 0)
+                    prefs.edit().putInt("com.example.app.currentFood", setter+1).commit()
+
                     val i = Intent(this@PageActivity, PageActivity::class.java)
+                    startActivity(i)
+                }
+                if(position==0){
+                    val i = Intent(this@PageActivity, NutritionActivity::class.java)
                     startActivity(i)
                 }
                 super.onPageSelected(position)
@@ -81,19 +95,63 @@ class PageActivity : FragmentActivity() {
         private val fa = fa
         override fun getItemCount(): Int = NUM_PAGES
 
-        override fun createFragment(position: Int): Fragment{
+        override fun createFragment(position: Int): Fragment {
 
-            val arr: IntArray = intArrayOf(R.layout.activity_scroller, R.layout.activity_page, R.layout.activity_page)
+            val arr: IntArray = intArrayOf(
+                R.layout.activity_scroller,
+                R.layout.activity_page,
+                R.layout.activity_scroller
+            )
             val arrPosition = arr[position]
+
+
             val currentView = ScreenSlidePageFragment(arrPosition)
+            //if (position == 1) {
 
 
+                var prefs = getSharedPreferences(
+                    "com.example.app", MODE_PRIVATE
+                )
 
-
+                var currentFood: Int = prefs.getInt("com.example.app.currentFood", 0)
+                val json: JSONArray = getJSON()
+                if (json != null) {
+                    val temp = json.getJSONObject(currentFood)
+                    if (temp != null) {
+                        if(currentFood >= 40) currentFood=0
+                        val d = temp.getString("name").filter { !it.isWhitespace() }
+                        val imageId =
+                            getResources().getIdentifier(d, "drawable", fa.getPackageName())
+                        initPage(temp.getString("name"), imageId)
+                    }
+                }
+            //}
             return currentView
+        }
+            }
+
+
+
+
+
+        fun initPage(nameText: String, imgSrc : Int){
+            if(findViewById<TextView>(R.id.textView) != null){
+                val nameTextField = findViewById<TextView>(R.id.textView)
+                nameTextField.text = nameText
+            }
+            if(findViewById<ImageView>(R.id.imageView) != null){
+                val imageViewField = findViewById<ImageView>(R.id.imageView)
+                imageViewField.setImageResource(imgSrc)
+            }
+        }
+
+        fun getJSON() : JSONArray {
+            val jsonObject = (::KotlinJsonObject)()
+            jsonObject.returnJson()
+            return jsonObject.obj
         }
     }
 
 
 
-}
+
