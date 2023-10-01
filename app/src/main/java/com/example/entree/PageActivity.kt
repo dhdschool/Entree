@@ -12,6 +12,11 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import kotlinx.serialization.*
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonObject
+import org.json.JSONObject
+import java.io.File
 
 class ScreenSlidePageFragment(activityPageId : Int) : Fragment(){
     public final val activityPageId : Int = activityPageId
@@ -91,4 +96,7 @@ class PageActivity : FragmentActivity() {
             return currentView
         }
     }
+
+
+
 }
