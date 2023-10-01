@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/matchReturn"
         android:layout_width="61dp"
         android:layout_height="53dp"
@@ -30,6 +30,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/textView6"
+        android:background="@color/white"
         app:srcCompat="@drawable/logox" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -66,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
-        android:background="#B3B3B3"
+        android:background="#B3B3B0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/matchPfp" />
@@ -99,9 +100,8 @@
                     android:layout_marginVertical="4dp"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="4dp"
-                    android:text="Beginning of your coversation history"
-                    android:textColor="#F8777777"
-                    android:textcolor="" />
+                    android:text="Beginning of your conversation history"
+                    android:textColor="#F8777777"></TextView>
 
             </LinearLayout>
 
