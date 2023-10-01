@@ -12,11 +12,12 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import kotlinx.serialization.*
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonObject
+//import kotlinx.serialization.*
+//import kotlinx.serialization.json.Json
+//import kotlinx.serialization.json.JsonObject
 import org.json.JSONObject
 import java.io.File
+
 
 class ScreenSlidePageFragment(activityPageId : Int) : Fragment(){
     public final val activityPageId : Int = activityPageId
@@ -54,6 +55,10 @@ class PageActivity : FragmentActivity() {
                     val i = Intent(this@PageActivity, PageActivity::class.java)
                     startActivity(i)
                 }
+                else if(position ==0){
+                    val i = Intent(this@PageActivity, NutritionActivity::class.java)
+                    startActivity(i)
+                }
                 super.onPageSelected(position)
             }
         })
@@ -86,10 +91,9 @@ class PageActivity : FragmentActivity() {
 
         override fun createFragment(position: Int): Fragment{
 
-            val arr: IntArray = intArrayOf(R.layout.activity_scroller, R.layout.activity_page, R.layout.activity_page)
+            val arr: IntArray = intArrayOf(R.layout.activity_nutrition, R.layout.activity_page, R.layout.activity_pagedummy)
             val arrPosition = arr[position]
             val currentView = ScreenSlidePageFragment(arrPosition)
-
 
 
 

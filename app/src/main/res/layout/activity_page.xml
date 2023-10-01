@@ -16,19 +16,7 @@
             app:layout_constraintBottom_toTopOf="@id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="48dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="20dp"
-                android:background="#4CAF50"
-                android:foreground="@android:drawable/arrow_down_float"
-                android:src="@android:drawable/arrow_down_float"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <View
             android:id="@+id/divider2"
@@ -45,9 +33,9 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="40dp"
-            android:background="#000000"
+            android:background="#FFFFFF"
             android:contentDescription="Image is food; default is Donze"
-            android:src="@drawable/donze"
+            android:src="@drawable/cereal"
             app:layout_constraintBottom_toBottomOf="@id/divider2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -74,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nova_oval"
-                android:text="Name, Age"
+                android:text="Name"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -88,7 +76,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="$d Mutuals" />
+                android:text="" />
         </LinearLayout>
 
         <View
@@ -109,7 +97,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:text="This is my bio, my bio is supposed to be very long, if my bio is not very long, something has gone very wrong"
+    android:text="Come take a bite out of me!!
+
+
+                                        Swipe right to learn more ;)
+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider3" />
