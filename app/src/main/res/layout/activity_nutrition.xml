@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/matchReturn"
         android:layout_width="61dp"
         android:layout_height="53dp"
@@ -99,9 +99,8 @@
                     android:layout_marginVertical="4dp"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="4dp"
-                    android:text="Beginning of your coversation history"
-                    android:textColor="#F8777777"
-                    android:textcolor="" />
+                    android:text="Beginning of your conversation history"
+                    android:textColor="#F8777777"></TextView>
 
             </LinearLayout>
 
